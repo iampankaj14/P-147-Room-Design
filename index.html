@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="color:cyan">
+
+    <a-camera position="0 8 15"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets timeout="10000">
+      
+      <a-asset-item id="room" src="assets/scene.gltf"></a-asset-item>
+      <img id="bg" src="/assets/bg.jpg">
+
+    </a-assets>
+    <a-sky src="#bg"></a-sky>
+
+    <!--------------------------------------GLTF Models----------------------------------------------------------->
+
+    <!--Room-->
+    <a-entity>
+      <a-entity position="0 7 9" scale="3 2 2"gltf-model="#room" >
+      </a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
